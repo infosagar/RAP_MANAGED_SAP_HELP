@@ -1,0 +1,21 @@
+projection;
+
+define behavior for ZC_TRAVEL_APPROVER_SP_M alias TravellApprover
+{
+  use create;
+  use update;
+  use delete;
+
+  use action acceptTravel;
+  use action rejectTravel;
+  use action createTravelByTemplate;
+
+  use association _Booking { create; }
+}
+
+define behavior for ZC_BOOKING_APPROVER_SP_M alias BookingApprover
+{
+  use update;
+
+  use association _Travel;
+}

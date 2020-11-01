@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition fot Travel'
+define service ZTravel_SP_M {
+  expose ZI_Travel_SP_M;
+}
